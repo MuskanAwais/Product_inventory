@@ -14,26 +14,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("DevCors", policy =>
-        policy.AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowAnyOrigin());
-});
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseCors("DevCors");
 }
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
-
 app.MapControllers();
 
 app.Run();
