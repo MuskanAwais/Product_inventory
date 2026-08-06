@@ -1,0 +1,25 @@
+# .NET
+bin/
+obj/
+publish/
+*.user
+*.suo
+.vs/
+*.DotSettings.user
+
+# Secrets / local config (keep Development secrets out of Git if needed)
+# appsettings.Development.json can stay for LocalDB/SQLEXPRESS learning projects
+# Never commit real Azure passwords
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Node (if added later)
+node_modules/
+dist/
+.env
+.env.*
