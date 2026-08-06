@@ -15,11 +15,9 @@ publish/
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/*
 !.vscode/extensions.json
 
 # Node (if added later)
 node_modules/
 dist/
-.env
-.env.*
+config.bat
